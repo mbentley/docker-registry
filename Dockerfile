@@ -7,3 +7,6 @@ RUN apk --no-cache upgrade --purge
 # copy over the contents into a new image
 FROM scratch
 COPY --from=upstream / /
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/etc/docker/registry/config.yml"]
