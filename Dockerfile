@@ -8,5 +8,9 @@ RUN apk --no-cache upgrade --purge
 FROM scratch
 COPY --from=upstream / /
 
+# disable tracing by default (https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/)
+#   see https://github.com/distribution/distribution/issues/4270
+ENV OTEL_TRACES_EXPORTER=none
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/etc/docker/registry/config.yml"]
