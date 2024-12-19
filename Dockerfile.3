@@ -1,5 +1,5 @@
 # start from upstream registry image & upgrade all packages
-ARG REGISTRY_TAG="3.0.0-rc.1"
+ARG REGISTRY_TAG="3.0.0-rc.2"
 FROM registry:${REGISTRY_TAG} AS upstream
 
 RUN apk --no-cache upgrade --purge
