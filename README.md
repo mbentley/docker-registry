@@ -8,7 +8,8 @@ The images on Docker Hub are not always updated as regularly as I would like.  T
 
 ## Tags
 
-* `latest`, `2` - maps to `registry:2`
+* `latest`, `3` - maps to `registry:3`
+* `2` - maps to `registry:2`
 
 ## Differences
 
